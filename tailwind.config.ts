@@ -16,6 +16,7 @@ export default {
 		typography,
 		skeleton({
 			themes: {
+				preset: ["hamlindigo"],
 				custom: [
 					bland,
 				],
