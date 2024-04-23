@@ -10,6 +10,7 @@
 	import css from 'highlight.js/lib/languages/css';
 	import javascript from 'highlight.js/lib/languages/javascript';
 	import typescript from 'highlight.js/lib/languages/typescript';
+	import { goto } from '$app/navigation';
 
 	hljs.registerLanguage('xml', xml); // for HTML
 	hljs.registerLanguage('css', css);
@@ -27,8 +28,8 @@
 			<div class="flex space-x-4 justify-between items-center">
 				<strong class="text-2xl"> tithe </strong>
 				<div class='flex space-x-4 justify-center items-center'>
-					<button type="button" class='btn variant-ghost'> home </button>
-					<button type="button" class='btn variant-ghost'> posts </button>
+					<a class='btn variant-ghost' href="/"> home </a>
+					<a class='btn variant-ghost' href="/posts/"> posts </a>
 				</div>
 			</div>
 			<!-- <svelte:fragment slot="trail">(actions)</svelte:fragment> -->
@@ -36,6 +37,8 @@
 	</svelte:fragment>
 	<!-- Page Route Content -->
 	<div class="size-full bg-surface-50-900-token">
-		<slot />
+		<div class='max-w-prose mx-auto flex-col items-center bg-surface-50-900-token size-full gap-10 space-y-20 py-20'>
+			<slot />
+		</div>
 	</div>
 </AppShell>
