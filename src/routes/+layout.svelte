@@ -22,11 +22,14 @@
 <AppShell>
 	<svelte:fragment slot="header">
 		<!-- App Bar -->
-		<AppBar gridColumns="grid-cols-1" slotDefault="place-self-center" slotTrail="place-content-end">
+		<AppBar gridColumns="grid-cols-1" slotDefault="place-self-center w-full max-w-prose" slotTrail="place-content-end">
 			<!-- <svelte:fragment slot="lead">(icon)</svelte:fragment> -->
-			<div class="flex-row space-y-4 justify-center">
+			<div class="flex space-x-4 justify-between items-center">
 				<strong class="text-2xl"> tithe </strong>
-				<p> hello </p>
+				<div class='flex space-x-4 justify-center items-center'>
+					<button type="button" class='btn variant-ghost'> home </button>
+					<button type="button" class='btn variant-ghost'> posts </button>
+				</div>
 			</div>
 			<!-- <svelte:fragment slot="trail">(actions)</svelte:fragment> -->
 		</AppBar>

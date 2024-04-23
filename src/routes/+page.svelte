@@ -8,5 +8,5 @@
 	 width="w-1/2"
 	 class="mx-auto "
 	 rounded="rounded-none"/>
-	<p class="text-lg">Hi I'm tithe. By day I do software in traditional finance (L + boring). I'm mostly interested in web3, but this is intedended to act as a repository for all of my terrible ideas, web3 or otherwise. Make yourself at home.</p>
+	<p class="text-lg">Hi I'm tithe. By day I do software in traditional finance (boring). I'm mostly interested in web3, but this is intedended to act as a repository for all of my terrible ideas, web3 or otherwise. Make yourself at home.</p>
 	</div>
