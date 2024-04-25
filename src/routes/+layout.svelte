@@ -36,9 +36,11 @@
 		</AppBar>
 	</svelte:fragment>
 	<!-- Page Route Content -->
-	<div class="size-full bg-surface-50-900-token">
-		<div class='max-w-prose mx-auto flex-col items-center bg-surface-50-900-token size-full gap-10 space-y-20 py-20'>
-			<slot />
+	<div class="w-full mx-2">
+		<div class="size-full bg-surface-50-900-token">
+			<div class='max-w-prose mx-auto flex-col items-center bg-surface-50-900-token size-full gap-10 space-y-20 py-20'>
+				<slot />
+			</div>
 		</div>
 	</div>
 </AppShell>
