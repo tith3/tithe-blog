@@ -46,7 +46,7 @@
                 justify="justify-between"
              />
         {:else}
-            <a class="btn btn-sm variant-ghost w-fit self-center" href="/posts" >All Posts -&#62;</a>
+            <a class="btn btn-sm variant-ringed w-fit self-center card-hover" href="/posts" >All Posts -&#62;</a>
         {/if}
     
 </div>
