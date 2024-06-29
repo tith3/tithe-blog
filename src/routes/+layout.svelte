@@ -13,6 +13,9 @@
 	import typescript from 'highlight.js/lib/languages/typescript';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import TagSelector from '$lib/components/TagSelector.svelte';
+	import { showTags } from '$lib/stores/tags';
+
 
 	hljs.registerLanguage('xml', xml); // for HTML
 	hljs.registerLanguage('css', css);
@@ -49,11 +52,13 @@
 		<AppBar gridColumns="grid-cols-1" slotDefault="place-self-center w-full max-w-prose" slotTrail="place-content-end">
 			<!-- <svelte:fragment slot="lead">(icon)</svelte:fragment> -->
 			<div class="flex space-x-4 justify-between items-center">
-				<strong class="text-2xl z-10 {isHovered ? 'absolute' : 'static'}"
-                        on:mouseenter={handleMouseEnter}
-                        on:mouseleave={handleMouseLeave}>
-                    {isHovered ? expandedText : headerText}
-                </strong>
+				<a class="flex items-center" href="/">
+					<strong class="text-2xl z-10 {isHovered ? 'absolute' : 'static'}"
+							on:mouseenter={handleMouseEnter}
+							on:mouseleave={handleMouseLeave}>
+						{isHovered ? expandedText : headerText}
+					</strong>
+				</a>
 				<div class='flex space-x-4 justify-center items-center'>
 					<a class='btn variant-ringed card-hover' href="/"> home </a>
 					<a class='btn variant-ringed card-hover' href="/posts/"> posts </a>
@@ -69,6 +74,9 @@
 			<div class='max-w-prose mx-auto flex-col items-center bg-surface-50-900-token size-full gap-10 space-y-10 py-10 '>
 				<slot />
 			</div>
+			{#if showTags}
+				<TagSelector />
+			{/if}
 		</div>
 	</div>
 </AppShell>

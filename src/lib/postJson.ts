@@ -69,7 +69,7 @@ export const posts = [
       "goodbye"
     ],
     "slug": "markdown-and-images",
-    "content": "<h3>Inserting Images</h3>\n<p><img src=\"/path/to/image.jpg\" alt=\"Alt Text\"></p>\n"
+    "content": "<h3>Inserting Images</h3>\n<p></p>\n"
   },
   {
     "title": "Markdown Tables",
